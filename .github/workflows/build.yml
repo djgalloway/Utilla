@@ -20,3 +20,9 @@ jobs:
 
     - name: Build mod
       uses: ./.github/actions/build
+      # Upload artifact
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-output
+        path: output/
